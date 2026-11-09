@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elkıran Mühendislik | Makine Metal ve İnşaat Proje Hizmetleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14202b;--steel:#2b3a47;--signal:#f2b705;--concrete:#d9dbd7;--paper:#f6f7f8;--card:#fff;--text:#1b2631;--muted:#5b6772;--line:#c7ccd1;--green:#2f6f4e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#10181f;--card:#18232d;--text:#e8ecef;--muted:#a1adb7;--line:#2c3a46;--concrete:#232f39}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;min-height:100%;background:var(--paper);color:var(--text);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Jost","Helvetica Neue",Arial,sans-serif;font-weight:400;line-height:1.12;letter-spacing:.01em;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+[hidden]{display:none!important}
+.brand{position:absolute;top:calc(env(safe-area-inset-top,0px) + 18px);left:24px;z-index:5;font:400 20px "Jost",sans-serif;color:#fff;letter-spacing:.08em;text-decoration:none}
+.lg{width:40px;height:40px;vertical-align:middle;margin-right:10px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55))}
+.dc{display:contents}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.cta.alt2{background:transparent;color:var(--text);border:1px solid var(--line)}
+/* Home split */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;min-height:100dvh}
+.pane{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:32px 40px 56px;border:0;text-align:left;cursor:pointer;color:#fff;font:inherit;transition:flex .3s}
+.pane.m{background:linear-gradient(#14202b,#2b3a47)}
+.pane.i{background:#3d4a44;color:#fff}
+.pane h1{font-size:clamp(38px,5vw,68px);font-weight:300;letter-spacing:.02em}
+.pane p{margin:0;max-width:34ch;opacity:.9}
+.pane .go{align-self:flex-start;border:1px solid rgba(255,255,255,.7);color:#fff;font-size:15px;letter-spacing:.04em;padding:11px 24px;border-radius:0;transition:background .2s,color .2s}
+.pane:hover .go{background:#fff;color:#14202b}
+.pane svg{position:absolute;top:0;right:0;width:100%;height:60%;opacity:.28;pointer-events:none}
+.intro{position:absolute;top:calc(env(safe-area-inset-top,0px) + 20px);right:24px;z-index:5;color:#fff;font-size:14px;max-width:26ch;text-align:right;opacity:.85}
+/* Inner views */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 14px) 24px 14px;background:var(--ink);color:#fff}
+.top .b{font:400 19px "Jost",sans-serif;letter-spacing:.08em;text-decoration:none}
+.back{background:none;border:1px solid #fff8;color:#fff;padding:8px 14px;border-radius:2px;cursor:pointer;font:inherit;font-size:15px}
+.hero{padding:56px 24px 48px;color:#fff}
+.hero.m{background:var(--steel)}
+.hero.i{background:#3d4a44}
+.wrap{max-width:1040px;margin:0 auto}
+.hero h2{font-size:clamp(32px,4.6vw,52px);font-weight:300;max-width:22ch}
+.hero p{max-width:56ch;margin:16px 0 0;opacity:.92}
+section.s{padding:48px 24px}
+section.s h3{font-size:clamp(26px,3.2vw,32px);margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;border:1px solid var(--line)}
+.grid>div{padding:22px;border:1px solid var(--line);margin:-1px 0 0 -1px;background:var(--card)}
+.grid h4{margin:0 0 8px;font:500 20px "Jost",sans-serif;letter-spacing:.01em}
+.grid p{margin:0;color:var(--muted);font-size:15.5px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;border-top:2px solid var(--signal);padding-top:12px}
+.steps li::before{content:counter(s);font:300 36px "Jost",sans-serif}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:15.5px}
+.alt{background:var(--concrete)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.tags li{background:var(--card);border:1px solid var(--line);padding:8px 16px;border-radius:2px}
+form{display:grid;gap:14px;max-width:620px}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:2px;width:100%}
+textarea{min-height:120px;resize:vertical}
+button.cta{justify-self:start;background:var(--signal);color:#14202b;border:0;padding:14px 26px;font:600 16px "IBM Plex Sans",sans-serif;cursor:pointer;border-radius:2px}
+button.cta:hover{background:#ffd23f}
+.note{color:var(--muted);font-size:14px;margin:0}
+footer{background:var(--ink);color:#c9d1d6;padding:28px 24px calc(28px + env(safe-area-inset-bottom,0px));font-size:15px}
+@media(max-width:720px){.split{grid-template-columns:1fr}.pane{min-height:50vh;padding:28px 24px 36px}.intro{display:none}.brand{position:static;display:block;background:var(--ink);padding:calc(env(safe-area-inset-top,0px) + 14px) 24px 14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true"><defs><linearGradient id="chr" gradientUnits="userSpaceOnUse" x1="0" y1="2" x2="0" y2="38"><stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b3bcc4"/><stop offset=".47" stop-color="#4f5963"/><stop offset=".5" stop-color="#eef2f5"/><stop offset=".72" stop-color="#8e98a2"/><stop offset="1" stop-color="#dde3e8"/></linearGradient></defs><symbol id="lg" viewBox="0 0 40 40"><g fill="none" stroke="url(#chr)" stroke-width="1.7" stroke-linejoin="miter"><polygon points="20,2.5 35.2,11.25 35.2,28.75 20,37.5 4.8,28.75 4.8,11.25"/><path d="M10 28.5 15.2 13.5 20.4 28.5M11.9 23.5H18.5"/><path d="M31 13.5H23V28.5H31M23 21H29.5"/></g></symbol></svg>
+
+<main id="home">
+  <a class="brand" href="#"><svg class="lg" aria-hidden="true"><use href="#lg"/></svg>Elkıran Mühendislik</a>
+  <p class="intro">Ne için proje hizmeti arıyorsun? Alanını seç.</p>
+  <div class="split">
+    <button class="pane m" data-go="metal" aria-label="Makine metal alanı proje hizmeti">
+      <svg viewBox="0 0 400 240" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><circle cx="200" cy="110" r="70"/><circle cx="200" cy="110" r="22"/><path d="M200 20v180M110 110h180M60 110h-30M370 110h-30M200 220v10" stroke-dasharray="8 4 2 4"/><rect x="40" y="190" width="90" height="30"/></svg>
+      <h1>Makine<br>Metal</h1>
+      <p>Teknik resim, 3D model, lazer ve CNC parça işleme ve kaplama.</p>
+      <span class="go">Bu alana gir</span>
+    </button>
+    <button class="pane i" data-go="insaat" aria-label="İnşaat alanı proje hizmeti">
+      <svg viewBox="0 0 400 240" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M40 200h320M70 200V110l130-70 130 70v90M160 200v-60h80v60M70 110h260"/><path d="M60 215h280" stroke-dasharray="8 4"/></svg>
+      <h1>İnşaat</h1>
+      <p>Villa, prefabrik, çelik yapı ve İPARD projeleri; proje, ruhsat, şantiye şefliği ve yapım.</p>
+      <span class="go">Bu alana gir</span>
+    </button>
+  </div>
+</main>
+
+<div id="metal" hidden>
+  <div class="top"><a class="b" href="#"><svg class="lg" aria-hidden="true"><use href="#lg"/></svg>Elkıran Mühendislik</a><button class="back" data-go="">Alan seçimine dön</button></div>
+  <div class="hero m"><div class="wrap"><h2>Makine ve metal parça projeleri</h2>
+    <p>Elinde bir parça, makine ya da sadece bir fikir var. Çizimini, 3D modelini, işlenmesini ve kaplamasını birlikte çözelim.</p></div></div>
+  <section class="s"><div class="wrap"><h3>Neye ihtiyacın var?</h3>
+    <div class="grid">
+      <div><h4>Teknik resim</h4><p>Parçanın ölçülü, imalata uygun 2D çizimini hazırlıyoruz.</p></div>
+      <div><h4>3D model çizimi</h4><p>Parçadan, numuneden ya da ölçüden üç boyutlu model çıkarıyoruz.</p></div>
+      <div><h4>Makine projesi</h4><p>Makinenin tasarımı, montaj çizimleri ve parça listesi.</p></div>
+      <div><h4>Kaplama</h4><p>Parçanı kaplatmak istiyorsan uygun kaplamayı seçmene ve süreci yürütmene yardım ediyoruz.</p></div>
+      <div><h4>Lazer ve CNC parça işleme</h4><p>Parçanın çizimini hazırlıyor, lazer kesim ve CNC işleme sürecini senin yerine yürütüyoruz.</p></div>
+    </div></div></section>
+  <section class="s alt"><div class="wrap"><h3>Nasıl çalışıyoruz?</h3>
+    <ol class="steps">
+      <li><b>İhtiyacını anlat</b><span>Parça, çizim ya da fotoğraf gönder.</span></li>
+      <li><b>Teklif al</b><span>Kapsamı ve süreyi netleştirelim.</span></li>
+      <li><b>Çizim ve model</b><span>Hazırlanır, birlikte kontrol ederiz.</span></li>
+      <li><b>Teslim al</b><span>Dosyalar ya da işlenmiş, gerekirse kaplanmış parça.</span></li>
+    </ol></div></section>
+</div>
+
+<div id="insaat" hidden>
+  <div class="top"><a class="b" href="#"><svg class="lg" aria-hidden="true"><use href="#lg"/></svg>Elkıran Mühendislik</a><button class="back" data-go="">Alan seçimine dön</button></div>
+  <div class="hero i"><div class="wrap"><h2>Yapı projesinden ruhsata kadar</h2>
+    <p>Villa, prefabrik yapı, çelik yapı ya da tarımsal tesis. Projeni baştan sona hazırlıyor, yapımını üstleniyor, resmi süreci senin yerine takip ediyoruz.</p></div></div>
+  <section class="s"><div class="wrap"><h3>Hangi yapıyı yapacaksın?</h3>
+    <div class="grid">
+      <div><h4>Villa</h4><p>Konut ve villa için mimari ve uygulama projeleri.</p></div>
+      <div><h4>Prefabrik yapılar</h4><p>Hızlı kurulan prefabrik yapılar için proje ve çizim.</p></div>
+      <div><h4>İPARD projeleri</h4><p>Silo, ağıl ve yem deposu gibi tarımsal yapıların projesi.</p></div>
+      <div><h4>Çelik yapılar</h4><p>Çelik konstrüksiyon yapıların statik hesabı, projesi ve imalat çizimleri.</p></div>
+    </div></div></section>
+  <section class="s alt"><div class="wrap"><h3>Verdiğimiz hizmetler</h3>
+    <ul class="tags"><li>Mimari proje</li><li>Statik proje</li><li>Elektrik projesi</li><li>Mekanik projesi</li><li>Ruhsat takibi</li><li>Şantiye şefliği</li><li>İnşaat yapımı</li></ul>
+    <p class="note" style="margin-top:16px">Hepsini birlikte ya da ihtiyacın olanı tek tek isteyebilirsin.</p></div></section>
+</div>
+
+<section class="s" id="contact" hidden>
+  <div class="wrap"><h3>Teklif iste</h3>
+    <form id="f">
+      <label>Hizmet<select id="svc"></select></label>
+      <label>Adın<input id="nm" required autocomplete="name"></label>
+      <div id="mx" class="dc" hidden>
+        <label>Malzeme cinsi<input id="mt" placeholder="Örn: St37, paslanmaz, alüminyum"></label>
+        <label>İstenen termin süresi<input id="tm" placeholder="Örn: 10 gün, 2 hafta"></label>
+      </div>
+      <label>Ne yapmak istiyorsun?<textarea id="msg" required placeholder="Kısaca anlat: ne, nerede, ne zamana kadar?"></textarea></label>
+      <div class="row"><button class="cta" type="submit">WhatsApp ile gönder</button><button class="cta alt2" type="button" id="qm">E-posta ile gönder</button></div>
+      <p class="note">İstediğin yolla gönderebilirsin; mesaj hazır açılır, çizim ya da fotoğrafı orada ekleyebilirsin.</p>
+    </form></div>
+</section>
+
+<section class="s alt" id="kariyer" hidden>
+  <div class="wrap"><h3>Ekibimize katıl: şantiye şefi arıyoruz</h3>
+    <p class="note" style="margin-bottom:22px;max-width:60ch">Mimar, inşaat mühendisi ve tekniker arkadaşlar bilgilerini bırakabilir. Uygun bir proje çıktığında seninle iletişime geçeriz.</p>
+    <form id="kf">
+      <label>Ad soyad<input id="kn" required autocomplete="name"></label>
+      <label>Mesleğin<select id="kp"><option>İnşaat mühendisi</option><option>Mimar</option><option>Tekniker</option><option>Diğer</option></select></label>
+      <label>Telefon<input id="kt" type="tel" required autocomplete="tel"></label>
+      <label>E-posta<input id="ke" type="email" autocomplete="email"></label>
+      <label>Çalışabileceğin şehir(ler)<input id="kc"></label>
+      <label>Kısa not<textarea id="km" placeholder="Kaç yıllık tecrübe, daha önce hangi işlerde çalıştın?"></textarea></label>
+      <div class="row"><button class="cta" type="submit">WhatsApp ile başvur</button><button class="cta alt2" type="button" id="kmail">E-posta ile başvur</button></div>
+      <p class="note">Başvurun WhatsApp’ta ya da e-postada hazır açılır.</p>
+    </form></div>
+</section>
+
+<footer id="foot" hidden><div class="wrap">Elkıran Mühendislik · Ahmet Elkıran · Telefon: <a href="tel:+905374759010">0537 475 90 10</a></div></footer>
+
+<script>
+var PHONE="905374759010"; /* kendi WhatsApp numaranı yaz: 90 ile başlayıp boşluksuz */
+var OPT={metal:["Teknik resim","3D model çizimi","Makine projesi","Lazer ve CNC parça işleme","Kaplama"],
+insaat:["Villa projesi","Prefabrik yapı projesi","İPARD projesi (silo, ağıl, yem deposu)","Çelik yapı projesi","Mimari proje","Statik proje","Elektrik projesi","Mekanik projesi","Ruhsat takibi","Şantiye şefliği","İnşaat yapımı"]};
+var views=["home","metal","insaat"];
+function show(v){
+  if(v!=="metal"&&v!=="insaat")v="home";
+  views.forEach(function(n){document.getElementById(n).hidden=(n!==v)});
+  var c=v!=="home";
+  document.getElementById("contact").hidden=!c;
+  document.getElementById("foot").hidden=!c;
+  document.getElementById("kariyer").hidden=(v!=="insaat");
+  document.getElementById("mx").hidden=(v!=="metal");
+  if(c){
+    var s=document.getElementById("svc");
+    s.innerHTML=OPT[v].map(function(o){return "<option>"+o+"</option>"}).join("");
+  }
+  window.scrollTo(0,0);
+}
+function route(){show(location.hash.replace("#",""))}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-go]");
+  if(t){var g=t.getAttribute("data-go");if(g){location.hash=g}else{history.pushState(null,"",location.pathname);route()}}
+});
+window.addEventListener("hashchange",route);
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var t="Merhaba, ben "+document.getElementById("nm").value+".\nHizmet: "+document.getElementById("svc").value+(document.getElementById("mx").hidden?"":"\nMalzeme: "+document.getElementById("mt").value+"\nİstenen termin: "+document.getElementById("tm").value)+"\n"+document.getElementById("msg").value;
+  window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(t),"_blank","noopener");
+});
+document.getElementById("kf").addEventListener("submit",function(e){
+  e.preventDefault();
+  var g=function(i){return document.getElementById(i).value};
+  var t="Şantiye şefi başvurusu\nAd: "+g("kn")+"\nMeslek: "+g("kp")+"\nTelefon: "+g("kt")+"\nE-posta: "+g("ke")+"\nŞehir: "+g("kc")+"\nNot: "+g("km");
+  window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(t),"_blank","noopener");
+});
+var EMAIL=""; /* firma e-posta adresini buraya yaz, örn: bilgi@elkiranmuhendislik.com */
+function val(i){return document.getElementById(i).value}
+function sendMail(form,subj,body){if(!form.reportValidity())return;location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(body)}
+var qm=document.getElementById("qm"),km2=document.getElementById("kmail");
+if(!EMAIL){qm.hidden=true;km2.hidden=true}
+qm.addEventListener("click",function(){sendMail(document.getElementById("f"),"Teklif talebi: "+val("svc"),"Merhaba, ben "+val("nm")+".\nHizmet: "+val("svc")+(document.getElementById("mx").hidden?"":"\nMalzeme: "+val("mt")+"\nİstenen termin: "+val("tm"))+"\n"+val("msg"))});
+km2.addEventListener("click",function(){sendMail(document.getElementById("kf"),"Şantiye şefi başvurusu","Şantiye şefi başvurusu\nAd: "+val("kn")+"\nMeslek: "+val("kp")+"\nTelefon: "+val("kt")+"\nE-posta: "+val("ke")+"\nŞehir: "+val("kc")+"\nNot: "+val("km"))});
+route();
+</script>
+</body>
+</html>
